@@ -1,22 +1,19 @@
-# find out current active trasaction
+# Transactions in Java
 
-  private static void updateQuery() throws SQLException {
-        String sql ...
-        }
-    }
+## Overview:
 
-    private static boolean isCurrentActiveTransaction() throws SQLException {
-       
+Working with rollback
 
-        String sql = "SELECT \n" +
-                     "    COUNT(1) AS count\n" +
-                     "FROM\n" +
-                     "    INFORMATION_SCHEMA.INNODB_TRX\n" +
-                     "WHERE\n" +
-                     "    trx_mysql_thread_id = CONNECTION_ID()";
+## Task
 
-       
-}
-    
+1. create work table
+2. create method insertDataIntoWorkTable in datamanagement to add some data
+2.Inside Transaction.insertTransaction add code, which prevent saving record inserted into WORK table, when is less than five recorde inserted into Registration table.
 
+*Look what change in DataManagement.insertDataIntoRegistrationTable and try to use it.
 
+To test solution run TransactionTest.test_EX_3
+
+### Input / Output:
+
+test should pass
